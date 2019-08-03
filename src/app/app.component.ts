@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularPractiseCLI';
+  firstMediaItem = {
+    id: 1,
+    name: 'Firebug',
+    medium: 'Series',
+    category: 'Science Fiction',
+    year: 2019,
+    watchedOn: new Date(),
+    isFavorite: false
+  };
+
+  delete(event) {
+    console.log(event);
+  }
 }
