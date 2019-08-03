@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import MediaItemListInterface from './mediaItemListInterface';
 
 @Component({
   selector: 'app-media-item-list',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./media-item-list.component.css']
 })
 export class MediaItemListComponent implements OnInit {
+  @Input() mediaItems: MediaItemListInterface;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  delete(event) {
+    console.log(event);
   }
 
 }
